@@ -1,0 +1,12 @@
+.past {
+    background-color: grey;
+    opacity: 50%;
+}
+
+.current {
+    background-color: red;
+}
+
+.future {
+    background-color: green;
+}
