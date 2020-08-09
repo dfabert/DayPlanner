@@ -24,14 +24,24 @@ function updateStyles() {
 
 function pullData() {
     console.log('Pulling data from local storage');
+       
+    for(var i = 0; i< 24; i++){
+      var text = localStorage.getItem(i);
+        if(text != null){
+            //place text in correct hour
+            console.log(text);
+        }
 
-}
 
-$('.save-button').on('click', function(){
+    }
+}        
+
+$('button').on('click', function(){
+    console.log('saving to local storage');
     var textValue = $(this).siblings('textarea').val();
-    var parentHour = $(this).closest('hour').data('hour');
+    var hour = $(this).closest('div').data('hour');
 
-    localStorage.setItem(parentHour,textValue);
+    localStorage.setItem(hour,textValue);
 })
 
 
