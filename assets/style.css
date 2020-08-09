@@ -5,8 +5,10 @@
 
 .current {
     background-color: red;
+    color:  white;
 }
 
 .future {
     background-color: green;
+    color: white;
 }
