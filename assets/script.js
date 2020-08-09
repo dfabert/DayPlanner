@@ -1,7 +1,14 @@
+//Upon load, this function updates the time
 $(document).ready(function () {
     $('#currentDate').text(moment().format('MMMM DD YYYY'));
     $('#currentTime').text(moment().format('h:mm a'));
 })
+
+//Upon load, this function updates the styles to the current times
+$(document).ready(updateStyles());
+
+//Upon load, this fuction will pull the data from the local storage
+$(document).ready(pullData());
 
 
 function updateStyles() {
@@ -26,24 +33,20 @@ function pullData() {
     console.log('Pulling data from local storage');
        
     for(var i = 0; i< 24; i++){
-      var text = localStorage.getItem(i);
-        if(text != null){
+      var taskText = localStorage.getItem(i);
+        if(taskText != null){
             //place text in correct hour
-            console.log(text);
+            $("div[data-hour='" + i + "']").children('textarea').val(taskText);
         }
-
-
     }
 }        
 
+
+//Listener to save the information when it is entered
 $('button').on('click', function(){
-    console.log('saving to local storage');
     var textValue = $(this).siblings('textarea').val();
     var hour = $(this).closest('div').data('hour');
-
     localStorage.setItem(hour,textValue);
 })
 
 
-updateStyles();
-pullData();
