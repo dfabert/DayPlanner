@@ -1,3 +1,34 @@
+header {
+    text-align: center;
+}
+
+.calendar-container {
+    width: 500px;
+    margin: auto;
+}
+
+.hour {
+    display: flex;
+}
+
+p {
+    text-align: right;
+    width: 50px;
+}
+
+textarea {
+    resize: none;
+    width: 400px;
+    height: 35x;
+    border: 3px solid black;
+    padding: 5px;
+   
+}
+
+button {
+    
+}
+
 .past {
     background-color: grey;
     color: white;

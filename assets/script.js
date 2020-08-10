@@ -29,9 +29,7 @@ function updateStyles() {
     })
 }
 
-function pullData() {
-    console.log('Pulling data from local storage');
-       
+function pullData() {  
     for(var i = 0; i< 24; i++){
       var taskText = localStorage.getItem(i);
         if(taskText != null){
