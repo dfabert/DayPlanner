@@ -5,27 +5,29 @@ header {
 .calendar-container {
     width: 500px;
     margin: auto;
+    vertical-align: top;
 }
 
 .hour {
     display: flex;
+    margin: 4px;
 }
 
 p {
     text-align: right;
     width: 50px;
+    border-top: 1px solid grey;
 }
 
 textarea {
     resize: none;
     width: 400px;
-    height: 35x;
+    height: 50px;
     border: 3px solid black;
-    padding: 5px;
-   
 }
 
 button {
+    height: 50px;
     
 }
 
