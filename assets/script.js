@@ -1,6 +1,6 @@
 //Upon load, this function updates the time
 $(document).ready(function () {
-    $('#currentDate').text(moment().format('MMMM DD YYYY'));
+    $('#currentDate').text(moment().format('MMMM D, YYYY'));
     $('#currentTime').text(moment().format('h:mm a'));
 })
 
