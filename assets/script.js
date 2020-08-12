@@ -1,10 +1,6 @@
-//Upon load, this function updates the time
+//Upon load, these three functions updates the time, the styles to the current times and pulls the data from the local storage.  
 $(document).ready(updateTime());
-
-//Upon load, this function updates the styles to the current times
 $(document).ready(updateStyles());
-
-//Upon load, this fuction will pull the data from the local storage
 $(document).ready(pullData());
 
 function updateTime() {
@@ -34,6 +30,9 @@ function updateStyles() {
 }
 
 function pullData() {  
+    //set the time for all 24 hours
+    //potentially could do a future version where
+    //the start hour and the end hour could be set by the user
     for(var i = 0; i< 24; i++){
       var taskText = localStorage.getItem(i);
         if(taskText != null){
